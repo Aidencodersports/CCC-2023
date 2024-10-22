@@ -1,1 +1,3 @@
-dwashtfglijk
+key: dwashtfglijk
+ verified all problems on DMOJ
+
