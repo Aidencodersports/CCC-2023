@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    string row1;
+    string row2;
+    vector<int> r1;
+    vector<int> r2;
+
+    // Read input
+    getline(cin, row1);
+    getline(cin, row2);
+
+    // Remove spaces
+    row1.erase(remove(row1.begin(), row1.end(), ' '), row1.end());
+    row2.erase(remove(row2.begin(), row2.end(), ' '), row2.end());
+
+    // Check each character in row1 and row2
+    for (int i = 0; i < row1.length(); i++) {
+        if (row1[i] == '1') {
+            r1.push_back(1); // Add 1 to vector r1
+        } else if (row1[i] == '0') {
+            r1.push_back(0); // Add 0 to vector r1
+        }
+    }
+
+    for (int i = 0; i < row2.length(); i++) {
+        if (row2[i] == '1') {
+            r2.push_back(1); // Add 1 to vector r2
+        } else if (row2[i] == '0') {
+            r2.push_back(0); // Add 0 to vector r2
+        }
+    }
+
+    // Optional: Print the contents of the vectors
+    cout << "Vector r1: ";
+    for (int num : r1) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    cout << "Vector r2: ";
+    for (int num : r2) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
